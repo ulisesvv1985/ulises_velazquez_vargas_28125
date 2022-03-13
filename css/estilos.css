@@ -1,0 +1,386 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+/*//////////////////////// Colores /////////////////////////*/
+/*//////////////////////// Font Size /////////////////////////*/
+/*////////////////////////////// ANIMACIONES Y TRANSICIONES /////////////////////////////*/
+.escala {
+  -webkit-transition: .3s linear;
+  transition: .3s linear;
+}
+
+.escala:hover {
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+}
+
+.imgAnima {
+  -webkit-animation-name: efecto;
+          animation-name: efecto;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+}
+
+@-webkit-keyframes efecto {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@keyframes efecto {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Lato', Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: #ffffff;
+  background: #000000;
+}
+
+.body__bg {
+  background: #0d0d0d url(../media/images/background.jpg) no-repeat top center;
+}
+
+/*//////////////////////// títulos /////////////////////////*/
+h1 {
+  font-family: 'Lato', Arial, Helvetica, sans-serif;
+  font-size: 36px;
+  color: #009cff;
+}
+
+h2 {
+  font-family: 'Lato', Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  color: #009cff;
+}
+
+/*/////////////////////// botones /////////////////////////*/
+.btn-success, .portafolio__modal--btn {
+  font-family: 'Lato', Arial, Helvetica, sans-serif;
+  background: #6fb600 !important;
+  padding: 10px 70px;
+  font-size: 21px;
+  border: none;
+}
+
+/*//////////////////////// navbar /////////////////////////*/
+.navbar__bg {
+  background: rgba(0, 0, 0, 0.9) !important;
+}
+
+.navbar-collapse {
+  -webkit-box-flex: inherit;
+      -ms-flex-positive: inherit;
+          flex-grow: inherit;
+}
+
+.active {
+  border-bottom: #009cff 2px solid;
+}
+
+.dropdown-item {
+  color: #ffffff;
+}
+
+.dropdown-menu {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.dropdown-menu a:hover {
+  color: #009cff;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+/*//////////////////////// headline /////////////////////////*/
+.headline {
+  margin-bottom: 250px;
+}
+
+.headline__titulo {
+  font-family: 'Lato', Arial, Helvetica, sans-serif;
+  font-size: 36px;
+  color: #009cff;
+}
+
+.headline__parrafo {
+  font-size: 18px;
+}
+
+/*//////////////////////// Skills /////////////////////////*/
+.skills {
+  font-family: 'Lato', Arial, Helvetica, sans-serif;
+  text-align: center;
+  font-size: 16px;
+}
+
+.skills__bg {
+  background: #0d0d0d;
+}
+
+/*//////////////////////// tarjetas  /////////////////////////*/
+.tarjetas__bg1 {
+  background: #0d0d0d url(../media/images/bg-01.png) repeat-x;
+}
+
+.tarjetas__bg2 {
+  background: url(../media/images/bg-card.png) repeat-x;
+  -webkit-box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.75);
+}
+
+.tarjetas__bg2 a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.tarjetas__bg2 a:hover {
+  color: #009cff;
+  text-decoration: underline;
+}
+
+/*//////////////////////// Contacto /////////////////////////*/
+.contacto__bg {
+  background: #090909;
+}
+
+.contacto__box {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+}
+
+.contacto__Item-01 {
+  width: 100%;
+  padding: 0;
+}
+
+.contacto__Item-02 {
+  width: 100%;
+  padding: 0;
+}
+
+.contacto__socialBox {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+}
+
+.contacto__socialItem-01, .contacto__socialItem-02, .contacto__socialItem-03 {
+  width: 100px;
+  height: 65px;
+}
+
+/*//////////////////////// Portafolio BEM 04 /////////////////////////*/
+.portafolio {
+  background: #000000;
+  text-align: center;
+}
+
+.portafolio p {
+  color: #009cff;
+  font-size: 14px;
+}
+
+.portafolio__bg {
+  background: url(../media/images/bg.jpg) bottom center no-repeat;
+  padding-bottom: 104px;
+}
+
+.portafolio__title {
+  color: #ffffff;
+  font-size: 18px;
+  display: block;
+}
+
+/* Estilos Bootstrap*/
+.modal-title {
+  color: #009cff;
+}
+
+.modal-body {
+  padding: 1rem 0;
+}
+
+.modal-footer, .portafolio__modalEnd, .portafolio__modalStart {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.portafolio__modal {
+  color: #009cff;
+  text-align: left;
+  font-size: 30px;
+}
+
+.portafolio__modal p {
+  color: #000000;
+  margin-top: 10px;
+}
+
+.portafolio__modal a {
+  font-size: 18px;
+  color: #009cff;
+}
+
+.portafolio__modal--btn {
+  padding: 7px 17px;
+  font-size: 18px;
+  background: #6fb600;
+}
+
+.portafolio__modalEnd {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+
+.portafolio__modalStart {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+
+/*//////////////////////// Sobre mi /////////////////////////*/
+.ulises {
+  background: #000000;
+  text-align: left;
+}
+
+.ulises p {
+  color: #ffffff;
+  font-size: 18px;
+}
+
+.ulises p span {
+  color: #009cff;
+}
+
+.ulises ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 30px;
+}
+
+.ulises ul li {
+  color: #3aaf50;
+}
+
+.ulises ol {
+  list-style-type: none;
+  padding: 0;
+  padding-left: 25px;
+}
+
+.ulises ol li {
+  color: #a681d6;
+}
+
+.ulises ol li span {
+  color: #e8b045;
+}
+
+.ulises__bg {
+  background: url(../media/images/bg.jpg) bottom center no-repeat;
+  padding-bottom: 104px;
+}
+
+/* ------------------------------------------------------- Small devices (landscape phones, 576px and up) ------------------------------------------------------- */
+@media (min-width: 576px) {
+  /*//////////////////////// Menú /////////////////////////*/
+  .navbar-expand-sm .navbar-nav .nav-link {
+    padding-right: 0.7rem !important;
+    padding-left: 0.7rem !important;
+  }
+}
+
+/* ------------------------------------------------------------- Large devices (desktops, 992px and up)----------------------------------------------------------- */
+@media (min-width: 992px) {
+  .container {
+    max-width: 1140px;
+  }
+  /*//////////////////////// Headline /////////////////////////*/
+  .headline {
+    margin-bottom: 0;
+    min-height: 580px;
+  }
+  /*//////////////////////// Contacto /////////////////////////*/
+  .contacto__box {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-line-pack: start;
+        align-content: flex-start;
+  }
+  .contacto__Item-01 {
+    width: 49%;
+    /* Ancho de 49%*/
+    padding: 0 1% 0 0;
+  }
+  .contacto__Item-02 {
+    width: 49%;
+    /* Ancho de 49%*/
+    padding: 0 1% 0 0;
+  }
+}
+/*# sourceMappingURL=estilos.css.map */

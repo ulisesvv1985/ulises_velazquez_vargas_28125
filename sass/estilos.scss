@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+/*//////////////////////// Colores /////////////////////////*/
+$color1:#ffffff;
+$color2:#000000;
+$color3:#009cff;
+$color4:#6fb600;
+$color5:#3aaf50;
+$color6:#a681d6;
+$color7:#e8b045;
+/*//////////////////////// Font Size /////////////////////////*/
+$font-size-base:16px;
+$font-size-xxl:36px;
+$font-size-xl:30px;
+$font-size-m:18px;
+$font-size-s:14px;
+$font-size-btn:21px;
+//operadores - inicio
+$var1: 50%;
+$var2: 1%;
+/*////////////////////////////// ANIMACIONES Y TRANSICIONES /////////////////////////////*/
+.escala{    
+    -webkit-transition: .3s linear;
+    transition: .3s linear;
+} 
+.escala:hover{
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+}
+.imgAnima {  
+    animation-name: efecto;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 1s;
+    animation-direction: normal;
+}
+@keyframes efecto{
+    0%{
+    opacity: 0;
+    transform: translateY(-50px);
+    }
+    100%{
+    opacity: 1;
+    transform: translateY(0px);
+    }
+}
+html{
+	scroll-behavior:smooth;
+}
+body{
+    font-family:'Lato', Arial, Helvetica, sans-serif; 
+    font-size: $font-size-base; 
+    color:$color1;
+    background: $color2;
+}
+.body__bg{
+    background: #0d0d0d url(../media/images/background.jpg) no-repeat top center;
+}
+/*//////////////////////// títulos /////////////////////////*/
+h1{
+    font-family: 'Lato', Arial, Helvetica, sans-serif; 
+    font-size: $font-size-xxl; 
+    color: $color3;
+}
+h2{
+    font-family: 'Lato', Arial, Helvetica, sans-serif; 
+    font-size: $font-size-xl; 
+    color: $color3;    
+}
+/*/////////////////////// botones /////////////////////////*/
+.btn-success{
+    font-family: 'Lato', Arial, Helvetica, sans-serif;
+    background:$color4 !important;
+    padding:10px 70px;
+    font-size: $font-size-btn;
+    border: none;
+}
+/*//////////////////////// navbar /////////////////////////*/
+.navbar__bg {
+    background: rgba(0, 0, 0, .9) !important;
+}
+.navbar-collapse {
+    flex-grow: inherit;
+}
+.active{
+    border-bottom: $color3 2px solid;
+}
+.dropdown-item{
+    color: $color1;
+}
+.dropdown-menu{
+    background: rgba(0, 0, 0, .6);
+}
+.dropdown-menu a:hover{
+    color: $color3;
+    background: rgba(0, 0, 0, .6);
+}
+/*//////////////////////// headline /////////////////////////*/
+.headline{
+    margin-bottom: 250px;
+}
+.headline__titulo{
+    font-family: 'Lato', Arial, Helvetica, sans-serif; 
+    font-size: $font-size-xxl; 
+    color: $color3;
+}
+.headline__parrafo{
+    font-size: $font-size-m;
+}
+/*//////////////////////// Skills /////////////////////////*/
+.skills{
+    font-family: 'Lato', Arial, Helvetica, sans-serif;
+    text-align: center;    
+    font-size: $font-size-base;    
+}
+.skills__bg{
+    background: #0d0d0d;
+        
+}
+/*//////////////////////// tarjetas  /////////////////////////*/
+.tarjetas__bg1{
+    background:#0d0d0d url(../media/images/bg-01.png) repeat-x;
+}
+.tarjetas__bg2{
+    background: url(../media/images/bg-card.png) repeat-x;
+    -webkit-box-shadow: 0px 0px 15px 1px rgba(0,0,0,0.75); 
+    box-shadow: 0px 0px 15px 1px rgba(0,0,0,0.75);
+}
+.tarjetas__bg2 a{
+    color: $color1;
+    text-decoration: none;
+}
+.tarjetas__bg2 a:hover{
+    color: $color3;
+    text-decoration: underline;
+}
+
+/*//////////////////////// Contacto /////////////////////////*/
+.contacto__bg{
+    background: #090909;
+}
+.contacto__box{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+}
+.contacto__Item-01{
+    width: 100%;
+    padding:0;
+}
+.contacto__Item-02{
+    width: 100%;
+    padding:0;
+}
+.contacto__socialBox{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content:flex-start ;
+    align-content: flex-start;
+}
+.contacto__socialItem-01, .contacto__socialItem-02, .contacto__socialItem-03 {
+    width:100px;
+    height: 65px;
+    }
+
+/*//////////////////////// Portafolio BEM 04 /////////////////////////*/
+.portafolio{
+    background: #000000;
+    text-align: center;
+    p{
+        color: $color3;
+        font-size: $font-size-s;
+    }
+}
+.portafolio__bg{
+    background: url(../media/images/bg.jpg) bottom center no-repeat;
+    padding-bottom: 104px;
+}
+.portafolio__title{
+    color: $color1;
+    font-size: $font-size-m;    
+    display: block;
+}
+/* Estilos Bootstrap*/
+.modal-title{
+    color: $color3;
+}
+.modal-body{
+    padding: 1rem 0;
+}
+.modal-footer{
+    justify-content: space-between;
+}
+.portafolio__modal{
+    color:$color3;
+    text-align: left;
+    font-size: $font-size-xl;
+    p{
+        color: $color2;
+        margin-top: 10px;
+    }
+    a{
+        font-size: $font-size-m;
+        color: $color3;
+    }
+}
+.portafolio__modal--btn{
+    @extend .btn-success;
+    padding: 7px 17px;
+    font-size: 18px;
+    background:$color4;
+}
+.portafolio__modalEnd{
+    @extend .modal-footer;
+    justify-content: end;
+}
+.portafolio__modalStart{
+    @extend .modal-footer;
+    justify-content: start;
+}
+/*//////////////////////// Sobre mi /////////////////////////*/
+.ulises{
+    background: #000000;
+    text-align: left;
+    p{
+        color: $color1;
+        font-size: $font-size-m;
+        span{
+            color: $color3;
+        }
+    }
+    
+    ul{
+        list-style-type: none;
+        padding: 0;
+        margin-top: 30px;
+        li{
+            color: $color5;            
+        }
+    }
+    ol{
+        list-style-type: none;
+        padding: 0;
+        padding-left: 25px;
+        li{
+            color: $color6;
+            span{
+                color: $color7;
+            }            
+        }
+    }
+}
+.ulises__bg{
+    background: url(../media/images/bg.jpg) bottom center no-repeat;
+    padding-bottom: 104px;
+}
+
+/* ------------------------------------------------------- Small devices (landscape phones, 576px and up) ------------------------------------------------------- */
+@media (min-width: 576px){
+/*//////////////////////// Menú /////////////////////////*/
+.navbar-expand-sm .navbar-nav .nav-link {
+    padding-right: 0.7rem !important;
+    padding-left: 0.7rem !important;
+    }
+}
+/* ------------------------------------------------------------- Large devices (desktops, 992px and up)----------------------------------------------------------- */
+@media (min-width: 992px) {
+.container{
+    max-width: 1140px;
+}
+/*//////////////////////// Headline /////////////////////////*/
+.headline{
+    margin-bottom: 0;
+    min-height: 580px;
+}
+/*//////////////////////// Contacto /////////////////////////*/
+.contacto__box{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: flex-start;
+}
+.contacto__Item-01{
+    width: ($var1) - ($var2);
+    /* Ancho de 49%*/
+    padding: 0 1% 0 0;
+    }
+.contacto__Item-02{
+    width: ($var1) - ($var2);
+    /* Ancho de 49%*/
+    padding: 0 1% 0 0;
+    }
+}
+
